@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — All 55 PS5 Trophies</title>
+<meta name="description" content="Unofficial fan guide and tracker for all 55 Grand Theft Auto VI trophies on PS5: official names, descriptions and grades, a guide for each with sources, a roadmap to the platinum, missable flags, and a checklist that saves in your browser. Works offline.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="kicker">UNOFFICIAL FAN GUIDE &middot; PLAYSTATION 5 &middot; NO ONLINE TROPHIES</p>
+  <h1>GTA VI Trophy Guide &amp; Tracker</h1>
+  <p class="subtitle">All 55 PS5 trophies &mdash; official names, descriptions and grades, a guide for each with its sources, a roadmap to the platinum, and a checklist that saves in your browser. Works offline; nothing leaves this page.</p>
+  <div class="progress-wrap" aria-label="Progress">
+    <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+    <p class="progress-text"><strong id="progressText">0 of 55 earned</strong> &middot; <span id="progressBreakdown">0 platinum &middot; 0 gold &middot; 0 silver &middot; 0 bronze</span></p>
+  </div>
+</header>
+
+<main>
+  <section class="panel roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum &mdash; <span class="plat-name">Vice Got a Price!</span></h2>
+    <p class="roadmap-note">One playthrough is enough: there is no difficulty setting, no New Game+, and no mission replay, but free roam carries on after the story. Early estimates put the platinum at around 200 hours, most of it on the 100% checklist. <strong>Only one trophy is possibly missable</strong> &mdash; see the warning below &mdash; everything else can be done after the credits.</p>
+    <ol class="stages" id="stages"></ol>
+    <p class="missable-warning" id="missableWarning"><strong>&#9888; Possibly missable:</strong> <strong>Positive Mental Attitude</strong> &mdash; in Chapter 1, the morning after the mission Down to Earth, follow Lucia from the kitchen to the balcony and accept her meditation. It is gone after Chapter 1, and it is not confirmed yet whether the trophy needs it, so do not skip it. (GTABase trophy guide.)</p>
+  </section>
+
+  <section class="panel controls" aria-label="Tracker controls">
+    <div class="control-row">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name, mission, or keyword&hellip;" autocomplete="off"></label>
+      <label class="grade-label">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check-label"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="check-label spoiler-label"><input id="spoilers" type="checkbox"> Hide story spoilers</label>
+    </div>
+    <div class="control-row">
+      <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind">
+        <button type="button" data-kind="all" class="active">All kinds</button>
+        <button type="button" data-kind="story">Story</button>
+        <button type="button" data-kind="missable">Missable</button>
+        <button type="button" data-kind="collectibles">Collectibles</button>
+        <button type="button" data-kind="activities">Activities</button>
+        <button type="button" data-kind="online">Online</button>
+      </div>
+      <div class="io-buttons">
+        <button id="export" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+        <button id="reset" type="button">Reset</button>
+      </div>
+    </div>
+    <p class="controls-note" id="resultCount"></p>
+    <p class="spoiler-note" id="spoilerNote" hidden>Story spoiler hiding is on: story trophies stay hidden until you tick them earned. Turn it off above to see every name.</p>
+    <p class="online-note">Online trophies: <strong>none</strong>. Every one of the 55 is single-player, so the Online filter is empty on purpose &mdash; nothing here needs PS Plus or another player.</p>
+  </section>
+
+  <section aria-label="Trophy checklist">
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters. Clear the search or pick another kind.</p>
+  </section>
+
+  <section class="panel sources" aria-label="Sources">
+    <h2>Where the facts come from</h2>
+    <p>Official trophy names, descriptions and grades are shown as PlayStation publishes them, checked against the live lists on <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase &mdash; Grand Theft Auto VI Trophies (PS5)</a> and the full guide on <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase &mdash; GTA 6 Trophy Guide &amp; Achievements List</a>, with counts and extra detail cross-checked against the <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer trophy guide</a>. Every trophy below names its guide source beside its guide. The guides are written in our own words for this page; the counts (42 Shooting Range challenges, 14 drone-race locations, 18 meditation spots, 9 activity types, 8 garages) come from those guides, and where a guide itself says the exact steps are still unconfirmed, this page says so too.</p>
+    <p class="disclaimer">Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive, or PlayStation. No Rockstar logo, artwork, box art, or game screenshots are used here; the look is our own.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Progress saves in this browser (localStorage) and can be exported to a file and imported back. Share a trophy: open its guide and copy the page address &mdash; it carries a link straight to that trophy.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

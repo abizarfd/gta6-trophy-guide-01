@@ -1,0 +1,138 @@
+/* GTA VI Trophy Guide & Tracker — own look: deep Vice City dusk (plum, teal, neon pink),
+   no Rockstar artwork, no external fonts or images. System font stack only. */
+:root {
+  --bg: #150a1e;
+  --panel: #221130;
+  --panel-2: #2c1840;
+  --ink: #f4ecf8;
+  --muted: #c3aecf;
+  --line: #4a2d63;
+  --accent: #ff5da2;
+  --teal: #37e0c8;
+  --gold: #ffc44d;
+  --silver: #cfd6e4;
+  --bronze: #e0955a;
+  --platinum: #bfe8ff;
+  --danger: #ffb020;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+a { color: var(--teal); }
+.masthead {
+  padding: 28px 20px 18px;
+  background: linear-gradient(135deg, #3b1157 0%, #150a1e 55%, #0a2e2a 100%);
+  border-bottom: 3px solid var(--accent);
+}
+.masthead h1 { margin: 4px 0 6px; font-size: 2.1rem; line-height: 1.1; letter-spacing: -0.5px; }
+.kicker { margin: 0; color: var(--teal); font-size: 0.8rem; letter-spacing: 2px; font-weight: 700; }
+.subtitle { max-width: 880px; margin: 0; color: var(--muted); }
+main { max-width: 1060px; margin: 0 auto; padding: 0 16px 32px; }
+.progress-wrap { max-width: 880px; margin-top: 16px; }
+.progress-bar { height: 14px; background: #0d0613; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--accent)); transition: width 0.25s ease; }
+.progress-text { margin: 6px 0 0; font-size: 0.95rem; }
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 18px;
+}
+.panel h2 { margin: 0 0 8px; font-size: 1.3rem; }
+.plat-name { color: var(--platinum); }
+.roadmap-note, .missable-warning { margin: 8px 0; }
+.missable-warning {
+  background: #3a2a05;
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.stages { margin: 12px 0 0; padding-left: 0; list-style: none; counter-reset: stage; }
+.stages > li {
+  counter-increment: stage;
+  border-left: 4px solid var(--teal);
+  padding: 6px 0 10px 14px;
+  margin-bottom: 6px;
+}
+.stages > li::before {
+  content: "Stage " counter(stage) ": ";
+  font-weight: 800;
+  color: var(--teal);
+}
+.stages h3 { display: inline; font-size: 1.02rem; }
+.stages p { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+.stages .stage-trophies { color: var(--ink); font-size: 0.92rem; }
+.controls-note, .spoiler-note, .online-note { font-size: 0.92rem; color: var(--muted); margin: 10px 0 0; }
+.control-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 10px; }
+.control-row:last-child { margin-bottom: 0; }
+.search-label { flex: 1 1 280px; display: flex; gap: 8px; align-items: center; }
+.search-label input, .grade-label select {
+  background: #0d0613; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font: inherit;
+}
+.search-label input { flex: 1; }
+.check-label { display: flex; gap: 6px; align-items: center; white-space: nowrap; }
+.kind-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.kind-filters button, .io-buttons button, .import-btn {
+  font: inherit; cursor: pointer;
+  background: var(--panel-2); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
+}
+.kind-filters button.active { background: var(--accent); border-color: var(--accent); color: #1c0410; font-weight: 700; }
+.io-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.import-btn input { display: none; }
+.trophy-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; }
+.trophy {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.trophy.earned { border-color: var(--teal); }
+.trophy-head { display: flex; gap: 12px; align-items: flex-start; }
+.trophy-head input[type="checkbox"] { width: 22px; height: 22px; margin-top: 3px; accent-color: var(--teal); flex: none; cursor: pointer; }
+.trophy-title { flex: 1; min-width: 0; }
+.trophy-title h3 { margin: 0; font-size: 1.08rem; line-height: 1.25; }
+.trophy-title h3 .earned-mark { color: var(--teal); }
+.trophy-desc { margin: 3px 0 0; color: var(--muted); }
+.grade-badge {
+  flex: none; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+  border-radius: 999px; padding: 4px 10px; border: 1px solid;
+}
+.grade-platinum { color: var(--platinum); border-color: var(--platinum); }
+.grade-gold { color: var(--gold); border-color: var(--gold); }
+.grade-silver { color: var(--silver); border-color: var(--silver); }
+.grade-bronze { color: var(--bronze); border-color: var(--bronze); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag {
+  font-size: 0.78rem; border: 1px solid var(--line); border-radius: 999px;
+  padding: 2px 9px; color: var(--muted);
+}
+.tag.hidden-tag { color: var(--gold); border-color: var(--gold); }
+.tag.missable-tag { color: #1c0410; background: var(--danger); border-color: var(--danger); font-weight: 700; }
+.tag.kind-tag { color: var(--teal); border-color: var(--teal); }
+.trophy details { margin-top: 10px; }
+.trophy summary {
+  cursor: pointer; color: var(--accent); font-weight: 700;
+  padding: 6px 0; list-style: none;
+}
+.trophy summary::-webkit-details-marker { display: none; }
+.trophy summary::before { content: "\25B8  "; }
+.trophy details[open ] summary::before { content: "\25BE  "; }
+.guide-text { margin: 4px 0 8px; }
+.guide-source { font-size: 0.88rem; color: var(--muted); margin: 0; }
+.spoiler-hidden-name { color: var(--muted); font-style: italic; }
+.empty { text-align: center; color: var(--muted); padding: 24px 0; }
+.sources p { color: var(--muted); }
+.disclaimer { font-size: 0.88rem; }
+footer { max-width: 1060px; margin: 0 auto; padding: 0 16px 28px; color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 640px) {
+  .masthead h1 { font-size: 1.6rem; }
+  .io-buttons { margin-left: 0; }
+}
